@@ -53,6 +53,7 @@ class Favorites extends Component {
     render() { 
         return (
             <div>
+            <h3 className="text-center text-light">your Favorites List</h3>
             {this.renderFavorites()}
             </div>
         )   
