@@ -1,38 +1,146 @@
-.App {
-  text-align: center;
+body {
+    background:  url("./movies.jpg") center top no-repeat  ;
+    background-color: rgb(0, 0, 0);
+    font-family: cursive;
+   
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.navbar {
+    background-color: rgb(165, 118, 0);
+   position: fixed;
+   bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-radius: 35px 35px 0 0;
+    z-index: 100;
+    
+    
+    
+    
+    
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar ul li  {
+    display: inline-block;
+    list-style: none;
+    margin-left: 10px;
+    margin-right: 10px;
+  
+    
+    
+    
+}
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+
+    
+
+    
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navbar ul li .active {
+    color: black;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+
+.form .btn {
+    background-color: gold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input-group {
+    
+   padding-top: 50px;
+   padding-bottom: 20px;
+}
+
+.cardBody  {
+    border: 1px solid rgb(56, 56, 53) ;
+    border-radius: 15px;
+    background-color: rgb(56, 56, 53) ;
+    height: 100%;
+    
+}
+
+.cardBody:hover {
+    border: 1px solid rgba(255, 217, 0, 0.849) ;
+    background-color: rgba(255, 217, 0, 0.884) ;
+
+}
+.cardBody img {
+   height:350px;
+   border-radius: 15px;
+  
+}
+
+
+
+ .movieInfo {
+   text-align: center;
+   color: #fff;
+   font-weight: bold;
+   margin-bottom: 5px;
+   
+
+}
+
+ .cardBody .addButton {
+    color: #fff;
+    cursor: pointer;
+}
+
+.cardBody .addButton:active {
+    color: red;
+}
+
+
+
+
+.cardDetails .addButton {
+    color: #fff;
+    cursor: pointer;
+    margin-left: 20px;
+  
+   
+}
+.cardDetails .addButton i {
+    font-size: 38px;
+}
+
+.cardDetails .addButton:active {
+    color: red;
+}
+
+
+.fav-card {
+    margin-top: 50px;
+}
+
+.favoriet  {
+    border: 2px solid rgb(56, 56, 53) ;
+    border-radius: 15px;
+    background-color: rgb(56, 56, 53) ;
+   
+    
+   
+}
+
+.favoriet img {
+    height: 350px;
+    border-radius: 15px;
+}
+
+.fav-card .removeFav {
+    color: #fff;
+    cursor: pointer;
+}
+
+.fav-card .removeFav:active {
+    color: red;
 }
