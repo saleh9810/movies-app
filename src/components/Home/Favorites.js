@@ -29,7 +29,7 @@ class Favorites extends Component {
         
         return (
             <div className="row text-center fav-card">
-             <h3 className="text-center text-light">your Favorites List</h3>
+             <h3 className="text-center">your Favorites List</h3>
              <br/>
             {this.props.favorite.map(movie => (
                   <div className="col-md-3 col-sm-6 mb-5"  key={movie.imdbID}>
