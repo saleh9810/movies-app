@@ -7,13 +7,13 @@ body {
 
 
 .navbar {
-    background-color: rgb(165, 118, 0);
+    background-color: rgb(27, 25, 19);
    position: fixed;
    bottom: 0;
     width: 100%;
     display: flex;
     justify-content: center;
-    border-radius: 35px 35px 0 0;
+    border-radius: 45px 45px 0 0;
     z-index: 100;
     
     
@@ -44,7 +44,19 @@ body {
 }
 
 .navbar ul li .active {
-    color: black;
+    color: gold;
+}
+
+.navbar ul .fav-length {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    width: 30px;
+    text-align: center;
+    background-color: red;
+    border-radius: 50%;
+    position: relative;
+    right: 15px;
 }
 
 
@@ -121,6 +133,10 @@ body {
 .fav-card {
     margin-top: 50px;
 }
+.fav-card h3 {
+    padding-bottom: 20px;
+    color: #fff;
+}
 
 .favoriet  {
     border: 2px solid rgb(56, 56, 53) ;
@@ -143,4 +159,20 @@ body {
 
 .fav-card .removeFav:active {
     color: red;
+}
+
+
+
+@media (min-width:200px) and (max-width:281px) { 
+
+    .navbar ul li a {
+        font-size: 18px;
+    }
+
+    .cardDetails .addButton i {
+        position: relative;
+        left: 70px;
+    }
+
+
 }

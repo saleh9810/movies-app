@@ -16,7 +16,7 @@ class SearchForm extends Component {
     render() { 
         return ( 
             <form className="input-group form" onSubmit={this.onSubmit}>
-                  <input placeholder="Search IMDB" onChange={this.onChange} type="text" className="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" />
+                  <input placeholder="Search for any movie or tv-series" onChange={this.onChange} type="text" className="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" />
                   <span className="input-group-btn">
                   <button className="btn">Submit</button>
                   </span>
