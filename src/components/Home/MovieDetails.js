@@ -12,9 +12,6 @@ class MovieDetails extends React.Component {
       
       }
 
-      addFavouriteMovie = (movie) => {
-        this.props.addToFavorite(movie)
-   }
  
   
  
@@ -70,7 +67,6 @@ class MovieDetails extends React.Component {
                   <Link to="/" className="btn btn-danger mb-4 ms-3 text-light">
                      Back To Search
                   </Link>
-                  <a className="addButton" onClick={() => this.addFavouriteMovie(movie)} ><i className="fas fa-heart"></i></a>
                 </div>
               </div>
             </div>

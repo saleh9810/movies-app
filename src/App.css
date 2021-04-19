@@ -5,6 +5,7 @@ body {
    
 }
 
+/*navbar start*/
 
 .navbar {
     background-color: rgb(27, 25, 19);
@@ -34,7 +35,7 @@ body {
 }
 .navbar ul li a {
     text-decoration: none;
-    color: #fff;
+    color: rgba(255, 255, 255, 0.274);
     font-size: 20px;
     font-weight: bold;
 
@@ -44,7 +45,7 @@ body {
 }
 
 .navbar ul li .active {
-    color: gold;
+    color: rgb(255, 255, 255);
 }
 
 .navbar ul .fav-length {
@@ -60,7 +61,10 @@ body {
 }
 
 
+/*navbar end*/
 
+
+/*form start*/
 
 .form .btn {
     background-color: gold;
@@ -71,6 +75,10 @@ body {
    padding-top: 50px;
    padding-bottom: 20px;
 }
+
+/*form end*/
+
+/*card start*/
 
 .cardBody  {
     border: 1px solid rgb(56, 56, 53) ;
@@ -111,24 +119,10 @@ body {
     color: red;
 }
 
+/*card end*/
 
 
-
-.cardDetails .addButton {
-    color: #fff;
-    cursor: pointer;
-    margin-left: 20px;
-  
-   
-}
-.cardDetails .addButton i {
-    font-size: 38px;
-}
-
-.cardDetails .addButton:active {
-    color: red;
-}
-
+/*fav start*/
 
 .fav-card {
     margin-top: 50px;
@@ -161,17 +155,18 @@ body {
     color: red;
 }
 
+/*fav end*/
+
+
+
+
+
 
 
 @media (min-width:200px) and (max-width:281px) { 
 
     .navbar ul li a {
         font-size: 18px;
-    }
-
-    .cardDetails .addButton i {
-        position: relative;
-        left: 70px;
     }
 
 

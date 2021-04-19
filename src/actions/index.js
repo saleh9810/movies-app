@@ -1,4 +1,4 @@
-import {SEARCH_MOVIE, FETCH_MOVIES, FETCH_MOVIE, LOADING, ADD_TO_FAVORITE, REMOVE_FROM_FAVORITE} from './types';
+import {SEARCH_MOVIE, FETCH_MOVIES, FETCH_MOVIE, LOADING, ADD_TO_FAVORITE, REMOVE_FROM_FAVORITE, ADD_TO_FAVORITE_ID} from './types';
 import axios from 'axios';
 
 
@@ -38,14 +38,18 @@ export const fetchMovies = text =>  dispatch => {
       .catch(err => console.log(err));
   }
 
-  export const addToFavorite = (movie) => async dispatch => {
+  export const addToFavorite = (movie)  =>  (dispatch) => {
     dispatch({
       type: ADD_TO_FAVORITE,
       payload: movie
     })
+    
   }
 
-  export const removeFromFavorite = (movie) => async dispatch => {
+
+  
+
+  export const removeFromFavorite = (movie) =>  dispatch => {
       dispatch({
       type: REMOVE_FROM_FAVORITE,
       payload: movie

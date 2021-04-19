@@ -9,8 +9,6 @@ class Favorites extends Component {
 
 
     
-
-    
     removeFavoriteMovie = (movie) => {
         this.props.removeFromFavorite(movie)
     }
