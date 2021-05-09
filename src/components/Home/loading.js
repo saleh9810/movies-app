@@ -5,6 +5,7 @@ import Spinner from '../layout/Spinner'
 import MovieContainer from './MovieContainer'
 
 
+
 class loading extends Component {
 
     render() { 

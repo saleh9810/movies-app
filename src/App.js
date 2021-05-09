@@ -16,7 +16,8 @@ function App() {
     <Navbar />
     <div className="container">
       <Switch>
-        <Route exact path="/" component={loading} />
+          
+          <Route exact path="/" component={loading} />
         <Route exact path="/movie/:id" component={MovieDetails} />
         <Route exact path="/favorites" component={Favorites} />
 

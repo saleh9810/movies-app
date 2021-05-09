@@ -11,14 +11,13 @@ const initialState = {
 
   export default function(state = initialState, action) {
     switch(action.type) {
-
-             
+ 
 
                 case ADD_TO_FAVORITE:
                   
                  if(state.favorite.includes(action.payload)) {
                    return {
-                   ...state,
+                    ...state,
                    }
                    
                  }

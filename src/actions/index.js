@@ -39,6 +39,7 @@ export const fetchMovies = text =>  dispatch => {
   }
 
   export const addToFavorite = (movie)  =>  (dispatch) => {
+ 
     dispatch({
       type: ADD_TO_FAVORITE,
       payload: movie
@@ -54,6 +55,8 @@ export const fetchMovies = text =>  dispatch => {
       type: REMOVE_FROM_FAVORITE,
       payload: movie
     })
+
+    
   }
 
   export const setLoading = () => {

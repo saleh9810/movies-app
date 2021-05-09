@@ -9,8 +9,6 @@ class MovieCard extends Component {
 
 
 
-
-
  
     render() {
         const { movie } = this.props;
@@ -21,7 +19,7 @@ class MovieCard extends Component {
             <div className="cardBody text-center">
           
             <Link to={`/movie/${movie.imdbID}`}>
-              <img className="w-100 mb-2" src={movie.Poster} alt="Movie Cover" />
+              <img className="mb-2" src={movie.Poster} alt="Movie Cover" />
               </Link>  
               <a className="addButton"  onClick={() =>  this.props.addToFavorite(movie)}  ><i  className="fas fa-heart"></i></a>
               

@@ -34,7 +34,7 @@ function loadFromLocalStorage() {
 }
 
 const persistedState  = loadFromLocalStorage()
-const middleware = [thunk];
+
 
 
 
@@ -42,7 +42,7 @@ const middleware = [thunk];
 const store = createStore(
   reducers,
   persistedState,
-  composeWithDevTools(applyMiddleware(...middleware))
+  composeWithDevTools(applyMiddleware(thunk))
 );
 
 store.subscribe(() =>  saveState({ favorites: store.getState().favorites},));
