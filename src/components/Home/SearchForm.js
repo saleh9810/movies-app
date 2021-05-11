@@ -8,7 +8,7 @@ class SearchForm extends Component {
         this.props.searchMovie(e.target.value);
     }
 
-    onSubmit = e => {
+    onSubmit = (e) => {
         e.preventDefault()
         this.props.fetchMovies(this.props.text)
     }

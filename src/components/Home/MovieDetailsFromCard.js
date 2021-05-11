@@ -12,17 +12,7 @@ class MovieDetails extends React.Component {
       
       }
 
-      constructor(props){
-        super(props)
-        this.state ={
-          button: true
-        }
-      }
-      handleClick(){
-        this.setState({
-          button:!this.state.button
-        })
-      }
+   
     
 
  
@@ -78,11 +68,9 @@ class MovieDetails extends React.Component {
                   >
                     <i className="fab fa-imdb" style={{color: "rgb(245,197,24)", fontSize: "50px"}} />
                   </a>
-                  <Link to="/" className="btn btn-danger mb-4 ms-3 text-light">
-                     Back To Search
+                  <Link to="/favorites" className="btn btn-danger mb-4 ms-3 text-light">
+                     Back To favorites
                   </Link>
-
-                  <span className={this.state.button ? "addButton": "addButton-red"}  onClick={() => this.handleClick()}   ><i onClick={() =>  this.props.addToFavorite(movie)}  className="fas fa-heart"></i></span>
                 </div>
               </div>
             </div>
@@ -96,8 +84,7 @@ class MovieDetails extends React.Component {
     
     const mapStateToProps = state => ({
       loading: state.movies.loading,
-      movie: state.movies.movie,
-      favorite: state.favorites.favorite
+      movie: state.movies.movie
     });
     
     export default connect(

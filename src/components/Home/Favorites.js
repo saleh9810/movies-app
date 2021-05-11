@@ -31,7 +31,7 @@ class Favorites extends Component {
             {this.props.favorite.map(movie => (
                   <div className="col-md-3 col-sm-6 mt-3 movie-card"  key={movie.imdbID}>
                   <div className="favoriet cardBody">
-                      <Link to={`/movie/${movie.imdbID}`}>
+                      <Link to={`/moviecard/${movie.imdbID}`}>
                   <img className="w-100 mb-2" alt="poster" src={movie.Poster} />
                   </Link>
                   <br />

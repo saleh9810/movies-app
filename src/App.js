@@ -1,8 +1,9 @@
 import './App.css';
 import loading from './components/Home/loading';
-import MovieDetails from './components/Home/MovieDetails'
-import {BrowserRouter, Switch, Route} from 'react-router-dom'
-import Favorites from './components/Home/Favorites'
+import MovieDetails from './components/Home/MovieDetails';
+import MovieDetailsFromCard from './components/Home/MovieDetailsFromCard'
+import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import Favorites from './components/Home/Favorites';
 import Navbar from './components/layout/Navbar';
 
 
@@ -19,6 +20,7 @@ function App() {
           
           <Route exact path="/" component={loading} />
         <Route exact path="/movie/:id" component={MovieDetails} />
+        <Route exact path="/moviecard/:id" component={MovieDetailsFromCard} />
         <Route exact path="/favorites" component={Favorites} />
 
 

@@ -22,7 +22,7 @@ const initialState = {
                    
                  }
                   return {
-                    ...state, favorite: [...state.favorite, action.payload],
+                    ...state, favorite: [action.payload, ...state.favorite],
                     loading : false,
                   }
     

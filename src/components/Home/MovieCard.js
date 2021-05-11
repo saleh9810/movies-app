@@ -19,7 +19,8 @@ class MovieCard extends Component {
           
             <Link to={`/movie/${movie.imdbID}`}>
               <img className="mb-2" src={movie.Poster} alt="Movie Cover" />
-              </Link>                
+              </Link>        
+                      
             </div>
         
           </div>
