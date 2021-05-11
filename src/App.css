@@ -97,21 +97,19 @@ body {
     border-radius: 15px;
     background-color: rgb(56, 56, 53) ;
     height: 100%;
+    width: 100%;
     overflow: hidden;
     
 }
 
 .cardBody:hover {
-    border: 1px solid rgb(26,188,203) ;
+    border: 2px solid rgb(26,188,203) ;
     background-color: rgb(26,188,203) ;
 
 }
 .cardBody img {
-   height: 380px;
+   height: 100%;
    width: 100%;
-   border-bottom-left-radius: 10%;
-   border-bottom-right-radius: 10%;
-
   
 }
 
@@ -126,29 +124,34 @@ body {
 
 }
 
- .cardBody  .addButton {
+.cardDetails  .addButton {
     color: #fff;
     cursor: pointer;
-    font-size: 24px;
-    transform: translate(-50%);
+    font-size: 30px;
+    margin-left: 20px;
 }
 
-.cardBody  .addButton-red {
+.cardDetails  .addButton-red {
     color: red;
     cursor: pointer;
-    font-size: 24px;
-    transform: translate(-50%);
+    font-size: 30px;
+    margin-left: 20px;
+
+ 
 }
 
 
-.cardBody .addButton:hover {
-    color: red;
-}
+
 
 /*card end*/
 
 
 /*fav start*/
+
+.favoriet img  {
+    height: 360px;
+}
+
 
 
 .cardBody .removeFav {
@@ -156,7 +159,7 @@ body {
     cursor: pointer;
 }
 
-.cardBody .removeFav:active {
+.cardBody .removeFav:hover {
     color: red;
 }
 
@@ -183,20 +186,32 @@ body {
         width: 20px;
     }
 
-    .cardBody {
-       
-        width: 100%;
+    .cardBody:hover {
+        border: 1px solid rgb(56, 56, 53) ;
+        background-color: rgb(56, 56, 53) ;    
     }
-    .cardBody img {
-        height: 300px;
-        width: 100%;
-        border-bottom-left-radius: 10%;
-        border-bottom-right-radius: 10%;
-     
-       
-     }
-     
+  
         
+    
+}
+
+
+
+@media  (min-width: 520px) and (max-width:600px) { 
+
+
+ 
+    .movie-card  {
+        display: flex;
+        justify-content: center;
+    }
+
+    
+    .cardBody {
+      
+        width: 70%;
+    }
+   
     
 }
 
@@ -219,36 +234,16 @@ body {
         width: 15px;
     }
 
-}
-
-@media  (min-width: 700px) and (max-width:800px) { 
-  
-    
-}
-
-@media  (min-width: 520px) and (max-width:600px) { 
- 
-    .movie-card  {
-        display: flex;
-        justify-content: center;
+    .cardDetails .backToSearch {
+        font-size: 30px;
     }
-    .cardBody {
-      
-        width: 70%;
+
+    .cardDetails   { 
+        text-align: center;
+
     }
-    .cardBody img {
-        height: 300px;
-        width: 100%;
-        border-bottom-left-radius: 10%;
-        border-bottom-right-radius: 10%;
-     
-       
-     }
-    
+
+  
+
 }
 
-@media  (min-width: 1000px) and (max-width:1200px) { 
-  
-     
-    
-}

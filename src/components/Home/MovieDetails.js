@@ -12,6 +12,20 @@ class MovieDetails extends React.Component {
       
       }
 
+      constructor(props){
+        super(props)
+        this.state ={
+          button: true
+        }
+        this.handleClick = this.handleClick.bind(this);
+      }
+      handleClick(){
+        this.setState({
+          button:!this.state.button
+        })
+      }
+    
+
  
   
  
@@ -67,6 +81,8 @@ class MovieDetails extends React.Component {
                   <Link to="/" className="btn btn-danger mb-4 ms-3 text-light">
                      Back To Search
                   </Link>
+
+                  <span className={this.state.button ? "addButton": "addButton-red"}  onClick={() => this.handleClick()}   ><i  onClick={() =>  this.props.addToFavorite(movie)}  className="fas fa-heart"></i></span>
                 </div>
               </div>
             </div>
