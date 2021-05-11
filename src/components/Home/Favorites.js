@@ -26,11 +26,11 @@ class Favorites extends Component {
         }
         
         return (
-            <div className="row text-center  fav-card">
-             <h3 className="text-center">Your favorites list</h3>
+            <div className="row text-center">
+             <h3 className="text-center text-light  mt-3">Your favorites list</h3>
             {this.props.favorite.map(movie => (
-                  <div className="col-md-3 col-sm-6 mb-5"  key={movie.imdbID}>
-                  <div className="favoriet">
+                  <div className="col-md-3 col-sm-6 mt-3 movie-card"  key={movie.imdbID}>
+                  <div className="favoriet cardBody">
                       <Link to={`/movie/${movie.imdbID}`}>
                   <img className="w-100 mb-2" alt="poster" src={movie.Poster} />
                   </Link>

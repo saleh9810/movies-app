@@ -13,7 +13,7 @@ const MoviesContainer = (props) => {
   console.log(movies)
   let content = "";
   if (movies === undefined) {
-   content = <div><h1 className="text-center text-light">Cant find any my movies with this name</h1></div>
+   content = <div className="text-center"> <img  src="https://img.icons8.com/cotton/100/000000/road-closure--v1.png"/><h1 className="text-light mt-3"> Not Found</h1></div>
   } else {
     content = movies.map((movie, index) => (
       <MovieCard key={index} movie={movie} />

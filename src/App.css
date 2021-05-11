@@ -1,54 +1,64 @@
 body {
-    background:  url("./movies.jpg") center top no-repeat  ;
-    background-color: rgb(0, 0, 0);
+  /*  background:  url("./movies.jpg") center top no-repeat  ;
+    background-color: rgb(0, 0, 0); */
+    background-image: linear-gradient(to right, rgb(68, 34, 83), rgb(133, 13, 133));
     font-family: Times New Roman (serif);
    
 }
 
 /*navbar start*/
-
-.navbar {
-    background-color: rgb(27, 25, 19);
-   position: fixed;
-   bottom: 0;
-    width: 100%;
+.nav-buttons {
     display: flex;
-    justify-content: center;
-    border-radius: 45px 45px 0 0;
-    z-index: 100;
-    
-    
-    
-    
-    
-}
+    justify-content: flex-end;
+    margin-top: 20px;
 
-.navbar ul li  {
-    display: inline-block;
-    list-style: none;
-    margin-left: 10px;
-    margin-right: 10px;
   
-    
-    
-    
 }
-.navbar ul li a {
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.274);
+
+.nav-buttons .nav {
+    position: relative; 
+}
+
+.nav-buttons .nav div {
     font-size: 20px;
-    font-weight: bold;
-
-    
-
-    
+   
 }
 
-.navbar ul li .active {
-    color: rgb(255, 255, 255);
+.nav-buttons .nav div a {
+    color: black;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 10px;
 }
 
-.navbar ul .fav-length {
+.nav-buttons .nav .home {
+    padding: 10px;
+}
+
+.nav-buttons .nav .fav {
+    margin-right: 20px;
+    padding: 10px;
+}
+.nav-buttons .nav  .active {
+    background-color: rgb(26,188,203);
+    color: #fff;
+  
+}
+
+.nav-buttons .nav .home-btn {
+    border: 1px solid gray;
+    border-radius: 10px;
+
+}
+
+.nav-buttons .nav .fav-btn {
+    border: 1px solid gray;
+    border-radius: 10px;
+
+}
+
+.nav-buttons .nav  .fav-length {
+    display: inline-block;
     color: #fff;
     font-size: 20px;
     font-weight: 500;
@@ -56,9 +66,10 @@ body {
     text-align: center;
     background-color: red;
     border-radius: 50%;
-    position: relative;
-    right: 15px;
+   
+
 }
+
 
 
 /*navbar end*/
@@ -67,7 +78,8 @@ body {
 /*form start*/
 
 .form .btn {
-    background-color: gold;
+    background-color: rgb(26,188,203);
+    font-weight: 500;
 }
 
 .input-group {
@@ -84,19 +96,18 @@ body {
     border: 1px solid rgb(56, 56, 53) ;
     border-radius: 15px;
     background-color: rgb(56, 56, 53) ;
-    height: 95%;
-    position: relative;
+    height: 100%;
     overflow: hidden;
     
 }
 
 .cardBody:hover {
-    border: 1px solid rgba(255, 217, 0, 0.849) ;
-    background-color: rgba(255, 217, 0, 0.884) ;
+    border: 1px solid rgb(26,188,203) ;
+    background-color: rgb(26,188,203) ;
 
 }
 .cardBody img {
-   height: 93%;
+   height: 380px;
    width: 100%;
    border-bottom-left-radius: 10%;
    border-bottom-right-radius: 10%;
@@ -115,15 +126,20 @@ body {
 
 }
 
- .cardBody .addButton {
+ .cardBody  .addButton {
     color: #fff;
     cursor: pointer;
-    position: absolute;
-    font-size: 20px;
-    bottom: 0px;
-    left: 50%;
+    font-size: 24px;
     transform: translate(-50%);
 }
+
+.cardBody  .addButton-red {
+    color: red;
+    cursor: pointer;
+    font-size: 24px;
+    transform: translate(-50%);
+}
+
 
 .cardBody .addButton:hover {
     color: red;
@@ -134,34 +150,13 @@ body {
 
 /*fav start*/
 
-.fav-card {
-    margin-top: 50px;
-}
-.fav-card h3 {
-    padding-bottom: 20px;
-    color: #fff;
-}
 
-.favoriet  {
-    border: 2px solid rgb(56, 56, 53) ;
-    border-radius: 15px;
-    background-color: rgb(56, 56, 53) ;
-   
-    
-   
-}
-
-.favoriet img {
-    height: 350px;
-    border-radius: 15px;
-}
-
-.fav-card .removeFav {
+.cardBody .removeFav {
     color: #fff;
     cursor: pointer;
 }
 
-.fav-card .removeFav:active {
+.cardBody .removeFav:active {
     color: red;
 }
 
@@ -171,13 +166,89 @@ body {
 
 
 
-
-
-@media (min-width:200px) and (max-width:281px) { 
-
-    .navbar ul li a {
-        font-size: 18px;
+@media only screen and (max-width: 900px) {
+    .nav-buttons {
+        justify-content: center;
     }
 
+    .nav-buttons .nav div {
+        font-size: 15px;
+       
+    }
 
+    
+
+    .nav-buttons .nav  .fav-length {
+        font-size: 15px;
+        width: 20px;
+    }
+
+    .cardBody {
+       
+        width: 100%;
+    }
+    .cardBody img {
+        height: 300px;
+        width: 100%;
+        border-bottom-left-radius: 10%;
+        border-bottom-right-radius: 10%;
+     
+       
+     }
+     
+        
+    
+}
+
+
+@media only screen and (max-width:281px) { 
+
+    .nav-buttons {
+        justify-content: center;
+    }
+
+    .nav-buttons .nav div {
+        font-size: 10px;
+       
+    }
+
+  
+
+    .nav-buttons .nav  .fav-length {
+        font-size: 10px;
+        width: 15px;
+    }
+
+}
+
+@media  (min-width: 700px) and (max-width:800px) { 
+  
+    
+}
+
+@media  (min-width: 520px) and (max-width:600px) { 
+ 
+    .movie-card  {
+        display: flex;
+        justify-content: center;
+    }
+    .cardBody {
+      
+        width: 70%;
+    }
+    .cardBody img {
+        height: 300px;
+        width: 100%;
+        border-bottom-left-radius: 10%;
+        border-bottom-right-radius: 10%;
+     
+       
+     }
+    
+}
+
+@media  (min-width: 1000px) and (max-width:1200px) { 
+  
+     
+    
 }

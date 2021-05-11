@@ -6,7 +6,18 @@ import {connect} from 'react-redux'
 
 class MovieCard extends Component {
 
-
+  constructor(props){
+    super(props)
+    this.state ={
+      button: true
+    }
+    this.handleClick = this.handleClick.bind(this);
+  }
+  handleClick(){
+    this.setState({
+      button:!this.state.button
+    })
+  }
 
 
  
@@ -15,13 +26,13 @@ class MovieCard extends Component {
 
       
         return (
-          <div className="col-lg-3 col-md-3 col-sm-6 mb-5">
+          <div className="col-lg-3 col-md-3 movie-card  mb-5">
             <div className="cardBody text-center">
           
             <Link to={`/movie/${movie.imdbID}`}>
               <img className="mb-2" src={movie.Poster} alt="Movie Cover" />
               </Link>  
-              <a className="addButton"  onClick={() =>  this.props.addToFavorite(movie)}  ><i  className="fas fa-heart"></i></a>
+              <span className={this.state.button ? "addButton": "addButton-red"}  onClick={() => this.handleClick()}   ><i  onClick={() =>  this.props.addToFavorite(movie)}  className="fas fa-heart"></i></span>
               
             </div>
         

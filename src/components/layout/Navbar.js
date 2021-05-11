@@ -5,14 +5,20 @@ import {connect} from 'react-redux'
 
 const Navbar = ({favorite}) => {
     return (    
-        <div className="navbar"> 
-            <nav>
-                <ul>
-                    <li onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}><NavLink exact activeClassName="active"   to="/">Home <i className="fas fa-home"></i></NavLink></li>
-                    <li onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}><NavLink exact activeClassName="active"  to="/favorites">Favorites</NavLink></li>
-                    <li className="fav-length">{favorite.length}</li>
-                </ul>
-            </nav>
+        <div className="nav-buttons"> 
+
+
+                    <div className="nav">
+                        
+                                <div className="home" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}><NavLink exact activeClassName="active" className="home-btn"   to="/">Home <i className="fas fa-home"></i></NavLink></div>
+                                <div className="fav" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}><NavLink exact activeClassName="active" className="fav-btn"  to="/favorites">Favorites <span className="fav-length">{favorite.length}</span></NavLink></div>
+
+                   </div>
+
+
+             
+               
+
         </div>
       );
       
