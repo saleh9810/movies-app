@@ -11,16 +11,15 @@ const initialState = {
 
   export default function(state = initialState, action) {
     switch(action.type) {
- 
 
                 case ADD_TO_FAVORITE:
-                  
+
                  if(state.favorite.includes(action.payload)) {
-                   return {
-                    ...state,
-                   }
+                  return {favorite: state.favorite.filter(favorite => favorite !== action.payload)};
                    
                  }
+                 
+
                   return {
                     ...state, favorite: [action.payload, ...state.favorite],
                     loading : false,
@@ -28,6 +27,7 @@ const initialState = {
     
                  
                 case REMOVE_FROM_FAVORITE: 
+
                 return {favorite: state.favorite.filter(favorite => favorite !== action.payload)};
                 
                

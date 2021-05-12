@@ -17,6 +17,7 @@ class MovieDetails extends React.Component {
         this.state ={
           button: true
         }
+        this.handleClick = this.handleClick.bind(this);
       }
       handleClick(){
         this.setState({
@@ -97,7 +98,6 @@ class MovieDetails extends React.Component {
     const mapStateToProps = state => ({
       loading: state.movies.loading,
       movie: state.movies.movie,
-      favorite: state.favorites.favorite
     });
     
     export default connect(
