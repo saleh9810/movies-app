@@ -1,4 +1,4 @@
-import {SEARCH_MOVIE, FETCH_MOVIES, FETCH_MOVIE, LOADING, ADD_TO_FAVORITE, REMOVE_FROM_FAVORITE, ADD_TO_FAVORITE_ID} from './types';
+import {SEARCH_MOVIE, FETCH_MOVIES, FETCH_MOVIE, LOADING, ADD_TO_FAVORITE, REMOVE_FROM_FAVORITE} from './types';
 import axios from 'axios';
 
 
@@ -58,6 +58,10 @@ export const fetchMovies = text =>  dispatch => {
 
     
   }
+
+
+
+
 
   export const setLoading = () => {
     return {
