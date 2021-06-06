@@ -10,8 +10,8 @@ const Navbar = ({favorite}) => {
 
                     <div className="nav">
                         
-                                <div className="home" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}><NavLink exact activeClassName="active" className="home-btn"   to="/">Home <i className="fas fa-home"></i></NavLink></div>
-                                <div className="fav" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}><NavLink exact activeClassName="active" className="fav-btn"  to="/favorites">Favorites <span className="fav-length">{favorite.length}</span></NavLink></div>
+                                <div className="home" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}><NavLink exact activeClassName="active" className="nav-btn"   to="/">Home <i className="fas fa-home"></i></NavLink></div>
+                                <div className="fav" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}><NavLink exact activeClassName="active" className="nav-btn"  to="/favorites">Favorites <span className="fav-length">{favorite.length}</span></NavLink></div>
 
                    </div>
 

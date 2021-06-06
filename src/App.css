@@ -1,16 +1,18 @@
 body {
-  /*  background:  url("./movies.jpg") center top no-repeat  ;
-    background-color: rgb(0, 0, 0); */
-    background: linear-gradient(to right, rgb(3, 1, 1), rgb(8, 155, 131));
+    background: url('./movies.jpg') no-repeat top;
+    background-color: rgb(0, 0, 0);
     font-family: Times New Roman (serif);
 
     
    
 }
 
+
+
 h1,h2,h3,h4,h5 {
     text-transform: uppercase;
 }
+
 /*navbar start*/
 .nav-buttons {
     display: flex;
@@ -45,22 +47,18 @@ h1,h2,h3,h4,h5 {
     padding: 10px;
 }
 .nav-buttons .nav  .active {
-    background-color: rgb(26, 203, 129);
+    background: linear-gradient(rgb(12, 235, 205), rgb(4, 71, 51));
     color: #fff;
   
 }
 
-.nav-buttons .nav .home-btn {
+.nav-buttons .nav .nav-btn {
     border: 1px solid gray;
     border-radius: 10px;
+    color: #fff;
 
 }
 
-.nav-buttons .nav .fav-btn {
-    border: 1px solid gray;
-    border-radius: 10px;
-
-}
 
 .nav-buttons .nav  .fav-length {
     display: inline-block;
@@ -83,8 +81,9 @@ h1,h2,h3,h4,h5 {
 /*form start*/
 
 .form .btn {
-    background-color: rgb(41, 203, 26);
+    background: linear-gradient(rgb(12, 235, 205), rgb(4, 71, 51));
     font-weight: 500;
+    color: #fff;
 }
 
 .input-group {

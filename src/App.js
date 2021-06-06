@@ -14,11 +14,11 @@ function App() {
    
    
     <BrowserRouter>
+  
     <Navbar />
     <div className="container">
-      <Switch>
-          
-          <Route exact path="/" component={loading} />
+      <Switch> 
+        <Route exact path="/" component={loading} />
         <Route exact path="/movie/:id" component={MovieDetails} />
         <Route exact path="/moviecard/:id" component={MovieDetailsFromCard} />
         <Route exact path="/favorites" component={Favorites} />
