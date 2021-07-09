@@ -42,7 +42,7 @@ export const fetchMovies = text =>  dispatch => {
  
     dispatch({
       type: ADD_TO_FAVORITE,
-      payload: movie
+      payload : movie,
     })
     
   }

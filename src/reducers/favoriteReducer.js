@@ -16,21 +16,20 @@ const initialState = {
 
                 case ADD_TO_FAVORITE:
 
-                 if(state.favorite.includes(action.payload)) {
-                  return {favorite: state.favorite.filter(favorite => favorite !== action.payload)};
+                 if(!state.favorite.some(alreadyFavorite => alreadyFavorite.imdbID === action.payload.imdbID)) {
+                  return {...state, favorite: [action.payload, ...state.favorite],  };
                    
+                 }else {
+                   return {...state}
                  }
-                 
 
-                  return {
-                    ...state, favorite: [action.payload, ...state.favorite],
-                    loading : false,
-                  }
+                 
+                 
     
                  
                 case REMOVE_FROM_FAVORITE: 
 
-                return {favorite: state.favorite.filter(favorite => favorite !== action.payload)};
+                return {favorite: state.favorite.filter(favorite => favorite.imdbID !== action.payload.imdbID)};
                 
                
             default: return state

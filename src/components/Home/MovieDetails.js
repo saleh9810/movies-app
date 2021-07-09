@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux'
-import {fetchMovie, setLoading, addToFavorite} from '../../actions'
+import {fetchMovie, setLoading, addToFavorite, removeFromFavorite} from '../../actions'
 import {Link} from 'react-router-dom'
 import Spinner from '../layout/Spinner'
 
@@ -9,26 +9,34 @@ class MovieDetails extends React.Component {
     componentDidMount() {
         this.props.fetchMovie(this.props.match.params.id);
         this.props.setLoading();
+        
       
       }
 
-      constructor(props){
-        super(props)
-        this.state ={
-          button: true
-        }
-        this.handleClick = this.handleClick.bind(this);
-      }
-      handleClick(){
-        this.setState({
-          button:!this.state.button
-        })
-      }
-    
-
+      
  
       render() {
-        const { loading, movie } = this.props;
+        
+        const { loading, movie, favorite } = this.props;
+
+        const ifAlreadyFavorite = () => {
+          
+          if(favorite.some(item => item.imdbID === movie.imdbID)) {
+             return (
+                  <span className="addButton-red"><i onClick={() =>  this.props.removeFromFavorite(movie)}  className="fas fa-heart"></i></span>
+             )
+          }else {
+            return (
+              <span className="addButton" ><i onClick={() =>  this.props.addToFavorite(movie)}  className="fas fa-heart"></i></span>
+            )
+          }
+
+         
+
+          
+        }
+
+       
 
        
  
@@ -83,7 +91,8 @@ class MovieDetails extends React.Component {
                      Back To Search
                   </Link>
 
-                  <span className={this.state.button ? "addButton": "addButton-red"}  onClick={() => this.handleClick()}   ><i onClick={() =>  this.props.addToFavorite(movie)}  className="fas fa-heart"></i></span>
+                  {ifAlreadyFavorite()}
+
                 </div>
               </div>
             </div>
@@ -98,9 +107,11 @@ class MovieDetails extends React.Component {
     const mapStateToProps = state => ({
       loading: state.movies.loading,
       movie: state.movies.movie,
+      favorite: state.favorites.favorite,
+
     });
     
     export default connect(
       mapStateToProps,
-      { fetchMovie, setLoading,addToFavorite}
+      { fetchMovie, setLoading, addToFavorite, removeFromFavorite}
     )(MovieDetails);

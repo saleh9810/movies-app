@@ -1,10 +1,11 @@
-import {SEARCH_MOVIE, FETCH_MOVIES, FETCH_MOVIE, LOADING} from '../actions/types'
+import {SEARCH_MOVIE, FETCH_MOVIES, FETCH_MOVIE, ADD_TO_FAVORITE, REMOVE_FROM_FAVORITE, LOADING} from '../actions/types'
 
 const initialState = {
     text: '',
     movies: [],
     loading: false,
     movie: [],
+
   };
 
 export default function(state = initialState, action) {
@@ -28,6 +29,7 @@ export default function(state = initialState, action) {
                   movie: action.payload,
                   loading: false
                 };
+
                 case LOADING: 
                 return {
                     ...state,

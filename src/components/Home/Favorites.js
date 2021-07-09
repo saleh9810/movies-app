@@ -24,6 +24,8 @@ class Favorites extends Component {
             )
 
         }
+
+
         
         return (
             <div className="row text-center">
@@ -31,7 +33,7 @@ class Favorites extends Component {
             {this.props.favorite.map(movie => (
                   <div className="col-md-3 col-sm-6 mt-3 movie-card"  key={movie.imdbID}>
                   <div className="favoriet cardBody">
-                      <Link to={`/moviecard/${movie.imdbID}`}>
+                      <Link to={`/movie/${movie.imdbID}`}>
                   <img className="w-100 mb-2" alt="poster" src={movie.Poster} />
                   </Link>
                   <br />
@@ -62,7 +64,8 @@ class Favorites extends Component {
 
  const mapStateToProps = (state) => {
      return {
-        favorite: state.favorites.favorite
+        favorite: state.favorites.favorite,
+
       
      }
  }
