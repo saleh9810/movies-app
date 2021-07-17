@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom'
-import {addToFavorite} from '../../actions'
+import {addToFavorite, removeFromFavorite} from '../../actions'
 import {connect} from 'react-redux'
 
 
@@ -10,7 +10,24 @@ class MovieCard extends Component {
 
  
     render() {
-        const { movie } = this.props;
+        const { movie, favorite} = this.props;
+
+        const ifAlreadyFavorite = () => {
+          
+          if(favorite.some(item => item.imdbID === movie.imdbID)) {
+             return (
+                  <span className="addButton-red"><i onClick={() =>  this.props.removeFromFavorite(movie)}  className="fas fa-heart"></i></span>
+             )
+          }else {
+            return (
+              <span className="addButton" ><i onClick={() =>  this.props.addToFavorite(movie)}  className="fas fa-heart"></i></span>
+            )
+          }
+
+         
+
+          
+        }
 
       
         return (
@@ -18,16 +35,26 @@ class MovieCard extends Component {
             <div className="cardBody text-center">
           
             <Link to={`/movie/${movie.imdbID}`}>
-              <img className="mb-2" src={movie.Poster} alt="Movie Cover" />
-              </Link>        
-                      
+              <img className="" src={movie.Poster} alt="Movie Cover" />
+              </Link>  
+              {ifAlreadyFavorite()}
+   
             </div>
+
+
         
           </div>
         );
       }
 }
 
+const mapStateToProps = (state) => ({
+  favorite: state.favorites.favorite,
+
+
+});
+
+
 
  
-export default connect( null ,{addToFavorite})(MovieCard);
+export default connect( mapStateToProps ,{addToFavorite, removeFromFavorite})(MovieCard);

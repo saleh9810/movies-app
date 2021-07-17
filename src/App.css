@@ -13,9 +13,7 @@ body {
 
 
 
-h1,h2,h3,h4,h5 {
-    text-transform: uppercase;
-}
+
 
 /*navbar start*/
 .nav-buttons {
@@ -100,6 +98,10 @@ h1,h2,h3,h4,h5 {
 
 /*card start*/
 
+.movie-card  {
+    text-align: center;
+}
+
 .cardBody  {
     border: 1px solid rgb(56, 56, 53) ;
     border-radius: 15px;
@@ -116,7 +118,7 @@ h1,h2,h3,h4,h5 {
 
 }
 .cardBody img {
-   height: 100%;
+   height: 390px;
    width: 100%;
   
 }
@@ -129,6 +131,21 @@ h1,h2,h3,h4,h5 {
    font-weight: bold;
    margin-bottom: 5px;
    
+
+}
+
+.addButton {
+    color: #fff;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.addButton-red {
+
+    color: red;
+    cursor: pointer;
+    font-size: 25px;
+
 
 }
 
@@ -151,13 +168,15 @@ h1,h2,h3,h4,h5 {
 
 
 
+
+
 /*card end*/
 
 
 /*fav start*/
 
 .favoriet img  {
-    height: 360px;
+    height: 390px;
 }
 
 
@@ -204,24 +223,6 @@ h1,h2,h3,h4,h5 {
 }
 
 
-
-@media  (min-width: 520px) and (max-width:600px) { 
-
-
- 
-    .movie-card  {
-        display: flex;
-        justify-content: center;
-    }
-
-    
-    .cardBody {
-      
-        width: 70%;
-    }
-   
-    
-}
 
 
 @media only screen and (max-width:281px) { 
